@@ -62,10 +62,6 @@ namespace Holamundo
             // Si pasa todas las validaciones anteriores, muestra un mensaje de éxito
             MessageBox.Show("La contraseña es válida");
         }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }
+
