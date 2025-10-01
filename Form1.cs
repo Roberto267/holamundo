@@ -1,4 +1,4 @@
-﻿// Librerías necesarias para el funcionamiento del programa
+﻿// Estas librerías son necesarias para el funcionamiento del programa
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -6,23 +6,23 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-// Esta librería se usa para trabajar con expresiones regulares (Regex)
+// Esta librería se usa para trabajar con expresiones regulares.
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Holamundo
 {
-    // Esta es la clase principal del formulario
+    // Esta es la clase principal de nuestro formulario.
     public partial class Form1 : Form
     {
-        // Constructor del formulario (se ejecuta cuando se abre el programa)
+        // Este es el Constructor del formulario este se ejecuta cuando se abre el programa.
         public Form1()
         {
             InitializeComponent(); // Inicializa los componentes del formulario (botones, textos, etc.)
         }
 
-        // Evento que se ejecuta cuando el usuario hace clic en el botón "Validar contraseña"
+        // Aqui esta el evento que se ejecuta cuando el usuario hace clic en el botón de "Validar contraseña"
         private void btnValidar_Click(object sender, EventArgs e)
         {
             /*
@@ -43,15 +43,15 @@ namespace Holamundo
             // Se verifica si la primera contraseña cumple con el patrón
             bool valido = Regex.IsMatch(contrasena1, patron);
 
-            // Si la contraseña NO cumple con los requisitos...
+            //  Esta es la funcion if(si) donde si la contraseña NO cumple con los requisitos , muestra un mensaje de texto...
             if (!valido)
             {
-                // Muestra un mensaje de error
+                // Muestra un mensaje de error y muestra que error es..
                 MessageBox.Show("La contraseña no contiene los caracteres esperados al menos una letra mayúscula, Al menos una letra minúscula, Al menos un símbolo, Al menos un número...");
-                return; // Se detiene la ejecución del método
+                return; // con esto se detiene la ejecución del método
             }
 
-            // Si las dos contraseñas no son iguales...
+            // Aqui es si las dos contraseñas no son iguales...
             if (!contrasena1.Equals(contrasena2))
             {
                 // Muestra otro mensaje de error
@@ -64,4 +64,5 @@ namespace Holamundo
         }
     }
 }
+
 
